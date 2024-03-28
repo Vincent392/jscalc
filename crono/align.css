@@ -1,0 +1,36 @@
+.calculator {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    margin-top: 10px;
+}
+
+button {
+    font-size: 24px;
+    padding: 15px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
+
+button.clear {
+    grid-column: 1 / span 2;
+}
+
+button.equals {
+    grid-column: 3 / span 2;
+}
+
+button.negate {
+    grid-column: 1 / span 2;
+}
