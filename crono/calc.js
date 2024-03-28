@@ -15,6 +15,13 @@ function handleButtonClick(value) {
     } else if (value === 'C') {
         // Clear the display
         expression = '';
+    } else if (value === '+/-') {
+        // Toggle between positive and negative
+        if (expression.startsWith('-')) {
+            expression = expression.slice(1);
+        } else {
+            expression = '-' + expression;
+        }
     } else {
         // Append the clicked value to the expression
         expression += value;
@@ -23,7 +30,7 @@ function handleButtonClick(value) {
 }
 
 // Dynamically generate buttons
-const buttons = ['1', '2', '3', '+', '4', '5', '6', '-', '7', '8', '9', '*', 'C', '0', '=', '/'];
+const buttons = ['C', '(', ')', '%', '÷', '7', '8', '9', '×', '4', '5', '6', '-', '1', '2', '3', '+', '+/-', '0', '.', '='];
 
 buttons.forEach(button => {
     const btn = document.createElement('button');
