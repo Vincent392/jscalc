@@ -29,6 +29,9 @@ function handleButtonClick(value) {
     updateDisplay();
 }
 
+// Dynamically generate buttons
+const buttons = ['C', '(', ')', '%', '÷', '7', '8', '9', '×', '4', '5', '6', '-', '1', '2', '3', '+', '+/-', '0', '.', '='];
+
 buttons.forEach(button => {
     const btn = document.createElement('button');
     btn.textContent = button;
