@@ -32,6 +32,12 @@ function handleButtonClick(value) {
 // Dynamically generate buttons
 const buttons = ['C', '(', ')', '%', '÷', '7', '8', '9', '×', '4', '5', '6', '-', '1', '2', '3', '+', '+/-', '0', '.', '='];
 
+// Remove this is awkward message
+document.querySelector('h1').remove();
+document.querySelectorAll('a').forEach(element => {
+    element.remove();
+});
+
 buttons.forEach(button => {
     const btn = document.createElement('button');
     btn.textContent = button;
